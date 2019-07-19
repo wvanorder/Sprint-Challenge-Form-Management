@@ -2,9 +2,8 @@ import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 
-function Register({ setToken, touched, errors, }){
+function Register({ values, errors, touched, }){
 
     return(
         <Form className="form">
@@ -34,10 +33,10 @@ function Register({ setToken, touched, errors, }){
 
 
 export default withFormik({
-    mapPropsToValues(token, setToken){
+    mapPropsToValues(token, setToken, username, password){
         return{
-            username: '',
-            password: '',
+            username: username || '',
+            password: password || '',
             token: token,
             setToken: setToken
         };
@@ -49,12 +48,13 @@ export default withFormik({
             .min(8)
             .required()
     }),
-    handleSubmit(values, formikBag) {
+    handleSubmit(values) {
         const url = 'http://localhost:5000/api/register';
         axios
             .post(url, values)
             .then(res => {
                 localStorage.setItem('token', res.data.token);
+                values.token.setToken(res.data.token)
             })
             .catch(err => {
                 console.log(err);

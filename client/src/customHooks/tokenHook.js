@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 const useTokenHook = (key, initialValue) => {
     const [token, setStoredToken] = useState(() => {
