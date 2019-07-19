@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from './axiosWithAuth';
-import useTokenHook from './customHooks/tokenHook';
+import useLocalStorage from './customHooks/useLocalStorage'
 import Register from './components/register';
 import RecipeCard from './components/recipeCard'
 import './App.css';
@@ -14,14 +14,14 @@ const CardList = styled.div`
 
 function App() {
 
-  const [token, setToken] = useState('');
+  const [token, setToken] = useLocalStorage('token', '');
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
     if(token){
-      axiosWithAuth()
+      axiosWithAuth(token)
       .get(
-        `http://localhost:5000/api/restricted/data`, token)
+        `http://localhost:5000/api/restricted/data`)
       .then(res => setInfo(res.data))
       .catch(err => console.log(err))
     } else{

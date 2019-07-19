@@ -59,9 +59,9 @@ Follow these steps for completing your project:
 
 Your finished project must include all of the following requirements:
 
-- [ ] A registration form built with formik - include inputs for a `username` and a `password`
-- [ ] Form validation using Yup
-- [ ] A POST request made from the registration form to `http://localhost:6000/api/register` to add a user and retrieve a token - the request body should have the following shape:
+- [ x] A registration form built with formik - include inputs for a `username` and a `password`
+- [x ] Form validation using Yup
+- [ x] A POST request made from the registration form to `http://localhost:6000/api/register` to add a user and retrieve a token - the request body should have the following shape:
 
 ```js
 {
@@ -88,7 +88,7 @@ and the response object will look like this:
 
 ## Stretch Problems
 
-1. Styling! Make your form pretty. Research pseudo elements and event selectors. Try to find interesting ways to present and layout the data you recieve from the back end.
+1. Styling! Make your form pretty. Research pseudo elements and event selectors. Try to find interesting ways to present and layout the data you recieve from the back end. X
 
 1. Make a Login form. Compuse your Formik form in such a way that it can be extracted into a component and reused for both Register and Login.
 
