@@ -38,16 +38,16 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [ xxx] Create a forked copy of this project.
+- [ x] Add PM as collaborator on Github.
+- [x ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [x ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
 
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
-- [ ] Navigate to the BE folder in this repository (this is where your server is located) from the command line, install the dependencies, and run `yarn start` or `npm start` to spin up the server provided for you.
-- [ ] In the terminal, navigate back to the main folder, then into the `client` folder.
-- [ ] Create your React app here.
+- [ x] Implement the project on this Branch, **committing progress & changes often.**
+- [ ]x Push commits: `git push origin <firstName-lastName>`.
+- [x ] Navigate to the BE folder in this repository (this is where your server is located) from the command line, install the dependencies, and run `yarn start` or `npm start` to spin up the server provided for you.
+- [x ] In the terminal, navigate back to the main folder, then into the `client` folder.
+- [x ] Create your React app here.
 
 Follow these steps for completing your project:
 
@@ -59,9 +59,9 @@ Follow these steps for completing your project:
 
 Your finished project must include all of the following requirements:
 
-- [ ] A registration form built with formik - include inputs for a `username` and a `password`
-- [ ] Form validation using Yup
-- [ ] A POST request made from the registration form to `http://localhost:6000/api/register` to add a user and retrieve a token - the request body should have the following shape:
+- [ x] A registration form built with formik - include inputs for a `username` and a `password`
+- [x ] Form validation using Yup
+- [ x] A POST request made from the registration form to `http://localhost:6000/api/register` to add a user and retrieve a token - the request body should have the following shape:
 
 ```js
 {
@@ -82,13 +82,13 @@ and the response object will look like this:
 
 - [ ] Write a custom hook that can set and retrieve this token to and from local storage
 
-- [ ] A GET request made with the token to `http://localhost:6000/api/restricted/data` to retrieve protected data
+- [x ] A GET request made with the token to `http://localhost:6000/api/restricted/data` to retrieve protected data
 
 - [ ] Map over the array of objects you recieve and render some or all of it's information to the DOM.
 
 ## Stretch Problems
 
-1. Styling! Make your form pretty. Research pseudo elements and event selectors. Try to find interesting ways to present and layout the data you recieve from the back end.
+1. Styling! Make your form pretty. Research pseudo elements and event selectors. Try to find interesting ways to present and layout the data you recieve from the back end. X
 
 1. Make a Login form. Compuse your Formik form in such a way that it can be extracted into a component and reused for both Register and Login.
 
